@@ -1,0 +1,88 @@
+.cv-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px 80px 0px 50px;
+  display: flex;
+  object-fit: cover;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  margin-top: 20px;
+}
+
+.container-menu .logo {
+  width: 6vmax;
+}
+
+.dropdown_menucv {
+  display: block; /*No se ven pantalla grande mayor 991px*/
+  position: absolute;
+  top: 50px;
+  height: 0;
+  margin-right: 50%;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.012);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.dropdown_menucv.open {
+  height: 240px;
+}
+
+.dropdown_menucv li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #e6e6e6;
+  border-radius: 20px;
+  font-size: 2em;
+  z-index: 1000;
+}
+
+.dropdown_menucv li a {
+  text-decoration: none;
+  color: #e6e6e6;
+  border-radius: 20px;
+}
+
+.dropdown_menucv li a:hover,
+.dropdown_menucv li a.active {
+  background: #e6e6e6;
+  color: #141934;
+  width: 100%;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+/*BOTON Y NOMBRE DEL CENTRO*/
+
+/*Botón de menú - pantalla pequeña*/
+nav .toggle {
+  display: block;
+  position: absolute;
+  right: 40px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background-image: url("/public/jelly-close.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav .toggle.open {
+  background-image: url("/public/jelly-open.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
